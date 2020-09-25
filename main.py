@@ -93,7 +93,7 @@ def bird(birdNum,birdx,birdy,birdVel):
 			birdy[i]+=birdVel[i]
 			birdVel[i]+=0.05
 
-			if jump2():
+			if jump(birdy,pipey,i):
 				birdVel[i]=-2.6
 
 			fit[i]+=1
@@ -133,7 +133,7 @@ def game():
 				run = False
 
 		bg()
-		bird(5,birdx,birdy,birdVel)
+		bird(1,birdx,birdy,birdVel)
 		pipe()
 		base()
 
